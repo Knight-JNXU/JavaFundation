@@ -2,7 +2,7 @@ package code0;
 
 /**
  * Created by Knight_JXNU on 2016/11/3.
- * floor、rint、ceil用法
+ * floor、rint、ceil、round用法
  */
 public class FloorRintCeilRound {
 
