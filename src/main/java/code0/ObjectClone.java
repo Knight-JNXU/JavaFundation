@@ -52,6 +52,7 @@ public class ObjectClone {
         System.out.println("p0:" + p0);
         Person p1 = MyUtil.clone(p0);
         System.out.println("p1:" + p1);
+        //修改 clone 的 object 属性不会影响原来的 object 属性
         p1.setName("sw");
         System.out.println("p0:" + p0);
         System.out.println("p1:" + p1);
