@@ -5,6 +5,9 @@ import org.junit.Test;
 /**
  * Created by Knight_JXNU on 2016/11/4.
  * java assertion（断言）
+ * 注意把 jvm 的 vm option 设置为 -ea，
+ * 可参考http://www.hankcs.com/program/java-assert.html
+ * 或者印象笔记 idea assert 设置 vm option
  */
 public class AssertionUsage {
     @Test
