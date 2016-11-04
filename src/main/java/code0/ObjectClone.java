@@ -6,6 +6,7 @@ import java.io.*;
 
 /**
  * Created by Knight_JXNU on 2016/11/4.
+ * java object clone
  */
 public class ObjectClone {
 
