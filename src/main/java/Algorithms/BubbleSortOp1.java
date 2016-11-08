@@ -9,6 +9,7 @@ import java.util.Scanner;
  * Created by Knight_JXNU on 2016/11/8.
  * 优化后的冒泡排序
  * 时间复杂度：最坏情况下的时间复杂度为O(n^2)，最好情况下的时间复杂度为O(n)
+ * 空间复杂度：O(1)
  * demo input:
  * 1 2 3 4 5
  */
