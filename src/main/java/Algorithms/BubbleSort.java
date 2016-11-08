@@ -9,6 +9,7 @@ import java.util.Scanner;
  * Created by Knight_JXNU on 2016/11/8.
  * 冒泡排序(没有优化的)
  * 时间复杂度:O(n^2)
+ * 空间复杂度：O(1)
  * demo input:
  * 3 2 5 7 1
  */
