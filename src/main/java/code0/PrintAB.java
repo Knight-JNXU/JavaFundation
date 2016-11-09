@@ -25,6 +25,7 @@ public class PrintAB {
             System.out.print("b");
         }
         System.out.println("\n-----------");
+        //引用R哥的回答：PrintStream.printf()会返回this
         if(System.out.printf("a")==null){
             System.out.print("a");
         }else{
