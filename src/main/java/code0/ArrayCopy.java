@@ -14,6 +14,14 @@ public class ArrayCopy {
     public void test(){
         int array1[] = {1, 3, 4, 6, 0};
         int array2[] = new int[array1.length];
+        /**
+         * System.arraycopy(src, srcPos, dest, destPos, length);
+         * src：源数组
+         * srcPos：目标数组
+         * dest：目标数组
+         * destPos：目标数组中的起始位置
+         * length：要复制的数组元素的数量
+         */
         System.arraycopy(array1, 0, array2, 0, array2.length);
         System.out.println("array1:");
         System.out.println(Arrays.toString(array1));
