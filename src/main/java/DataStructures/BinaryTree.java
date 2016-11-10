@@ -2,13 +2,17 @@ package DataStructures;
 
 import until.CommonUtil;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 /**
  * Created by Knight_JXNU on 2016/11/9.
  * 二叉树的创建、前序、中序、后序遍历
- * 参考资料：http://www.tuicool.com/articles/Nz2Ebuz
+ * 参考资料：
+ * http://www.tuicool.com/articles/Nz2Ebuz
+ * http://blog.csdn.net/cxxsoft/article/details/935410
+ * input demo
+ * 1
+ * 1 2 3 4 5
+ * 1
+ * 4
  */
 public class BinaryTree {
 
@@ -26,57 +30,124 @@ public class BinaryTree {
     }
 
     public static void main(String[] args){
-        CommonUtil.print("请输入一颗二叉树，使用空格分隔：");
+        CommonUtil.println("请输入创建二叉树的方式：");
+        CommonUtil.println("1.createTree1");
+        CommonUtil.println("2.createTree2");
+        int chooice = CommonUtil.inputInt();
+        CommonUtil.println("请输入一颗二叉树，使用空格分隔：");
         int array[] = CommonUtil.inputIntArr();
-//        Node head = createTreeX(null, array, 0, array.length);
-//        Node head = createTreeX(null, array, array.length);
-        Arrays.sort(array);
-//        Node head = createTreeX(null, array, array.length/2, array.length);
-        Node head = createTreeX(array, array.length/2, 0, array.length-1);
-        int i=1;
-    }
-
-    /*private static Node createTreeX(Node node, int array[], int index, int len){
-        if(arrayPoint>=len){
-            return null;
-        }else{
-            node = new Node(array[arrayPoint++]);
-            if(index+1<len && array[index+1] <= node.value){
-                node.leftChild = createTreeX(node.leftChild, array, index+1, len);
-            }else{
-                if(index+2<len && array[index+2] > node.value){
-                    node.rightChild = createTreeX(node.rightChild, array, index+2, len);
-                }
+        Node head = null;
+        switch (chooice){
+            case 1:
+                head = createTree1(array, 0, array.length);
+                break;
+            case 2:
+                head = createTree2(array, 0, array.length);
+                break;
+            default:
+                CommonUtil.println("非法输入");
+                break;
+        }
+        boolean continueFlag = true;
+        CommonUtil.println("请输入遍历类型：");
+        CommonUtil.println("1.前序");
+        CommonUtil.println("2.中序");
+        CommonUtil.println("3.后序");
+        CommonUtil.println("4.结束");
+        while (continueFlag){
+            chooice = CommonUtil.inputInt();
+            switch (chooice){
+                case 1:
+                    dpreOrderAccess(head);
+                    CommonUtil.println("");
+                    break;
+                case 2:
+                    dmidOrderAccess(head);
+                    CommonUtil.println("");
+                    break;
+                case 3:
+                    dlastOrderAccess(head);
+                    CommonUtil.println("");
+                    break;
+                case 4:
+                    continueFlag = false;
+                    break;
+                default:
+                    CommonUtil.println("非法输入！");
+                    break;
             }
-            return node;
         }
-    }*/
-    private static Node createTreeX(int array[], int index, int start, int end){
-        if(index>(end-1) || index<(start+1)){
+    }
+
+    /**
+     * 使用递归创建二叉树方法一
+     * @param array
+     * @param i
+     * @param len
+     * @return
+     */
+    private static Node createTree1(int[] array, int i, int len){
+        if(i >= len){
             return null;
         }else{
-            Node node = new Node(array[index]);
-//            if(index-1>=0){
-                CommonUtil.print(""+(index-1));
-                node.leftChild = createTreeX(array, index-1, index);
-//            }
-//            if(index+1<len){
-                CommonUtil.print(""+(index+1));
-                node.rightChild = createTreeX(array, index+1, len);
-//            }
+            Node node = new Node(array[i]);
+            node.leftChild = createTree1(array, i*2+1, len);
+            node.rightChild = createTree1(array, i*2+2, len);
             return node;
         }
     }
-    /*private static Node createTreeX(Node node, int array[], int len){
-        if(arrayPoint==len){
+
+    /**
+     * 使用递归创建二叉树方法二
+     * @param array
+     * @param start
+     * @param end
+     * @return
+     */
+    private static Node createTree2(int[] array, double start, double end){
+        if(start > end){
             return null;
         }else{
-            node = new Node(array[arrayPoint++]);
-            node.leftChild = createTreeX(node.leftChild, array, len);
-            node.rightChild = createTreeX(node.rightChild, array, len);
-        }
+            Node node = new Node((int)Math.rint((start+end)/2));
+            node.leftChild = createTree2(array, start, (int)Math.rint((start+end)/2)-1);
+            node.rightChild = createTree2(array, (int)Math.rint((start+end)/2)+1, end);
             return node;
-    }*/
+        }
+    }
 
+    /**
+     * 前序遍历
+     * @param head
+     */
+    private static void dpreOrderAccess(Node head){
+        if(head != null){
+            CommonUtil.printWithSpa(head.value);
+            dpreOrderAccess(head.leftChild);
+            dpreOrderAccess(head.rightChild);
+        }
+    }
 
+    /**
+     * 中序遍历
+     * @param head
+     */
+    private static void dmidOrderAccess(Node head){
+        if(head != null){
+            dmidOrderAccess(head.leftChild);
+            CommonUtil.printWithSpa(head.value);
+            dmidOrderAccess(head.rightChild);
+        }
+    }
+
+    /**
+     * 后序遍历
+     * @param head
+     */
+    private static void dlastOrderAccess(Node head){
+        if(head != null){
+            dlastOrderAccess(head.leftChild);
+            dlastOrderAccess(head.rightChild);
+            CommonUtil.printWithSpa(head.value);
+        }
+    }
 }
