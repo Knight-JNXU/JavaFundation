@@ -18,8 +18,8 @@ public class QuickSort {
     private static int[] array;
 
     public static void main(String[] args){
-        CommonUtil.print("快速排序：");
-        CommonUtil.print("输入一个数组，用空格分隔：");
+        CommonUtil.println("快速排序：");
+        CommonUtil.println("输入一个数组，用空格分隔：");
         Scanner sc = new Scanner(System.in);
         String inputStr = sc.nextLine();
         String strs[] = inputStr.split(" ");
@@ -29,7 +29,7 @@ public class QuickSort {
             array[i] = Integer.parseInt(strs[i]);
         }
         quickSort(0, len-1);
-        CommonUtil.print("排序后的数组为：");
+        CommonUtil.println("排序后的数组为：");
         System.out.println(Arrays.toString(array));
     }
 

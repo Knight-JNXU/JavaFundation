@@ -15,8 +15,8 @@ import java.util.Scanner;
  */
 public class BubbleSort {
     public static void main(String[] args){
-        CommonUtil.print("冒泡排序：");
-        CommonUtil.print("输入一个数组，用空格分隔：");
+        CommonUtil.println("冒泡排序：");
+        CommonUtil.println("输入一个数组，用空格分隔：");
         Scanner sc = new Scanner(System.in);
         String inputStr = sc.nextLine();
         String strs[] = inputStr.split(" ");
@@ -33,7 +33,7 @@ public class BubbleSort {
                 }
             }
         }
-        CommonUtil.print("从小到大排序后");
-        CommonUtil.print(Arrays.toString(array));
+        CommonUtil.println("从小到大排序后");
+        CommonUtil.println(Arrays.toString(array));
     }
 }

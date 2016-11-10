@@ -15,20 +15,20 @@ import java.util.Scanner;
 public class RecursionHanoi {
 
     public static void main(String[] args){
-        CommonUtil.print("请输入盘子数量：");
+        CommonUtil.println("请输入盘子数量：");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         move(n, "A", "B", "C");
-        CommonUtil.print("end!");
+        CommonUtil.println("end!");
     }
 
     private static void move(int n, String a, String b, String c){
         //汉诺塔问题的递归出口
         if(n == 1){
-            CommonUtil.print(a+" -> "+c);
+            CommonUtil.println(a+" -> "+c);
         }else{
             move(n-1, a, c, b);
-            CommonUtil.print(a+" -> "+c);
+            CommonUtil.println(a+" -> "+c);
             move(n-1, b, a, c);
         }
     }
