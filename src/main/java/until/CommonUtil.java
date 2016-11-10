@@ -87,4 +87,19 @@ public class CommonUtil {
         }
         return matrix;
     }
+
+    /**
+     * 统一输出整形矩阵
+     * @param matrix
+     */
+    public static void printIntMat(int matrix[][]){
+        int rowN = matrix.length;
+        int columnN = matrix[0].length;
+        for(int i=0; i<rowN; i++){
+            for(int j=0; j<columnN; j++){
+                CommonUtil.printWithSpa(matrix[i][j]);
+            }
+            CommonUtil.println("");
+        }
+    }
 }
