@@ -7,12 +7,20 @@ import java.util.Scanner;
  */
 public class CommonUtil {
     /**
-     * 统一输出方法
+     * 统一带换行的输出方法
      * -.-怎么觉得有点矫情
      * @param str
      */
-    public static void print(String str){
+    public static void println(String str){
         System.out.println(str);
+    }
+
+    /**
+     * 统一的带空格的输出方法
+     * @param str
+     */
+    public static void printWithSpa(Object str){
+        System.out.print(str + " ");
     }
 
     /**
@@ -30,5 +38,15 @@ public class CommonUtil {
             array[i] = Integer.parseInt(strs[i]);
         }
         return array;
+    }
+
+    /**
+     * 输入一个int
+     * @return
+     */
+    public static int inputInt(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        return n;
     }
 }
