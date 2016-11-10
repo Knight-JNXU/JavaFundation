@@ -10,6 +10,8 @@ import java.util.Arrays;
  * 参考资料：http://bubkoo.com/2014/01/13/sort-algorithm/selection-sort/
  * 时间复杂度：平均、最好、最坏O(n^2)
  * 空间复杂度：O(1)
+ * input demo：
+ * 1 3 5 4 2
  */
 public class SelectionSort {
     public static void main(String[] args){
