@@ -141,7 +141,7 @@ public class SendEmail {
             //抄送
             message.setRecipient(Message.RecipientType.CC, new InternetAddress("1990785022@qq.com"));
             //密送(不会再邮件收件人名单中显示出来)
-            message.setRecipient(Message.RecipientType.BCC, new InternetAddress("1990785022@qq.com"));
+            message.setRecipient(Message.RecipientType.BCC, new InternetAddress("liuwen@mainiway.com"));
             //发送时间
             message.setSentDate(new Date());
             //创建一个MIME子类型为"related"的MimeMultipart对象
