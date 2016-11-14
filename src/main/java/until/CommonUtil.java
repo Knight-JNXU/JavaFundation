@@ -42,7 +42,7 @@ public class CommonUtil {
     }
 
     /**
-     * 把一行字符串转换成征信数组
+     * 把一行字符串转换成整形数组
      * @param str
      * @return
      */
