@@ -14,6 +14,6 @@ public class Dijkstra {
         int minDistance[] = new int[matrix.length];
         int p = 1;
         minDistance[0] = matrix[0][0];
-        for()
+//        for()
     }
 }
