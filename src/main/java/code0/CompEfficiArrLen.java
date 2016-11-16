@@ -15,7 +15,25 @@ public class CompEfficiArrLen {
         long start2, end2;
         int j;
         for(int n=0; n<tryTime; n++){
+
+            start2 = System.currentTimeMillis();
+            for(int i=0; i<max; i++){
+                j = 0;
+                while(j < array.length){
+                    j++;
+                }
+            }
+            end2 = System.currentTimeMillis();
+
             start1 = System.currentTimeMillis();
+            for(int i=0; i<max; i++){
+                j = 0;
+                while(j < len){
+                    j++;
+                }
+            }
+            end1 = System.currentTimeMillis();
+            /*start1 = System.currentTimeMillis();
             for(int i=0; i<max; i++){
                 j = 0;
                 while(j < len){
@@ -31,7 +49,7 @@ public class CompEfficiArrLen {
                     j++;
                 }
             }
-            end2 = System.currentTimeMillis();
+            end2 = System.currentTimeMillis();*/
             System.out.println("end1-start1:" + (end1-start1));
             System.out.println("end2-start2:" + (end2-start2));
         }
