@@ -5,6 +5,8 @@ import org.junit.Test;
 /**
  * Created by Knigh on 2016/11/24.
  * 宝尊笔试题
+ * result：
+ * 运行抛出异常
  */
 public class BaoZunTest00 {
     private class Animal{
