@@ -1,12 +1,9 @@
 package practice;
 
-import org.junit.Test;
-
 /**
  * Created by Knight_JXNU on 2016/11/28.
  */
 public class NewCodeTest02 {
-    @Test
     public void test(){
         byte b1=1, b2=2, b3, b6, b8;
         final byte b4=4, b5=6, b7;  //在这里没有给b7赋值居然没有出现编译错误，实在是出乎我的意料
