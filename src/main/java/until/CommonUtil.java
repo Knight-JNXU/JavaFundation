@@ -25,6 +25,15 @@ public class CommonUtil {
     }
 
     /**
+     * 统一输入字符串
+     * @return
+     */
+    public static String inputStr(){
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
+    }
+
+    /**
      * 封装了一个输入整形数组的方法
      * 使用空格分隔元素
      * @return
