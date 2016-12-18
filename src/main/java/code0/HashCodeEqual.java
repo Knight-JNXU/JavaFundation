@@ -9,6 +9,7 @@ import org.junit.Test;
  * true
  * 分析：
  * 所以拥有不同hashCode的对象也能equal
+ * 看以前的笔记发现hashCode只在集合中起作用
  */
 public class HashCodeEqual {
     private static int i=0;
