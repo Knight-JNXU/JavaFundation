@@ -13,7 +13,7 @@ import java.util.concurrent.FutureTask;
  mc1：Thread-0 run!
  mc1：Thread-0 finished!
  mc2：Thread-1 finished!
- * 分析：感觉就像是有返回值的Thread
+ * 分析：感觉就像是有返回值的Runnable
  */
 public class CallableUsage {
     private class MyCallable implements Callable<String>{
