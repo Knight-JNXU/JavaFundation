@@ -11,6 +11,7 @@ import java.util.List;
  * 探究使用for循环遍历remove数组元素
  * result：
  * java.util.ConcurrentModificationException
+ * 分析：如果是remove最后一项for循环会报错
  */
 public class ForListRemove {
     @Test
