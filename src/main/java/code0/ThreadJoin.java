@@ -7,7 +7,7 @@ import org.junit.Test;
  * 探究Thread join的作用
  * result：
  * my thread
- * test thread
+ * AtomicType thread
  * 分析：join会把子线程加入到主线程之前执行，只有在子线程执行完了，主线程才能继续执行
  */
 public class ThreadJoin {
@@ -28,7 +28,7 @@ public class ThreadJoin {
             MyThread myThread = new MyThread();
             myThread.start();
             myThread.join();
-            System.out.println("test thread");
+            System.out.println("AtomicType thread");
         }catch (Exception e){
             e.printStackTrace();
         }
