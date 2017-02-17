@@ -11,7 +11,7 @@ public class SameNameStaticMethod {
 
     }
     //编译错
-//    public void test(){
+//    public void PlusPlus(){
 //
 //    }
 }
