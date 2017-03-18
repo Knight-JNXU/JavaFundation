@@ -28,10 +28,12 @@ public class SendEmail {
     private final static String IS_ENABLED_DEBUG_MOD = "true";
     //发件人
 //    private static final String from = "m18702510536_3@163.com";
-    private static final String from = "18702510536@sina.cn";
+//    private static final String from = "18702510536@sina.cn";
+    private static final String from = "knightdevelop@sina.com";
     //收件人
 //    private static final String to = "18702510536@sina.cn";
-    private static final String to = "m18702510536_3@163.com";
+//    private static final String to = "m18702510536_3@163.com";
+    private static final String to = "1990785022@qq.com";
     //初始化连接邮件服务器的会话信息
     private static Properties properties = null;
 
@@ -47,9 +49,9 @@ public class SendEmail {
     public static void main(String[] args){
 //        sentTextEmail();
 
-//        sendHtmlEmail();
+        sendHtmlEmail();
 
-        sendHtmlWithInnerImageEmail();
+//        sendHtmlWithInnerImageEmail();
     }
 
     /**
@@ -88,7 +90,8 @@ public class SendEmail {
     }
 
     private static class MyAuthenticator extends Authenticator{
-        private String username = "18702510536";
+//        private String username = "18702510536";
+        private String username = "knightdevelop@sina.com";
 //        private String password = "lw231029";
         private String password = "231029";
 
