@@ -11,7 +11,7 @@ import org.junit.Test;
 * @description : junit的一些基础注解
 * @result : 
 */
-public class JunitTestTemp{
+public class JunitBaseAnnotation{
     @Before
     public void beforeMethod0(){
         System.out.println("before method 0");
