@@ -42,12 +42,12 @@ public class MutipleBeforeAfter {
 		System.out.println("after method 1");
 	}
 	@After
-	public void afterMethod2(){
-		System.out.println("after method 2");
-	}
-	@After
 	public void afterMethod3(){
 		System.out.println("after method 3");
+	}
+	@After
+	public void afterMethod2(){
+		System.out.println("after method 2");
 	}
 	
 	
