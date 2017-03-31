@@ -1,7 +1,9 @@
 package code1;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -47,6 +49,24 @@ public class JunitBaseAnnotation{
     @Test
     public void testMethod1(){
         System.out.println("test method 1");
+    }
+    
+    @Test
+//    public static void testMethod2(){
+    //  这里不能用static修饰，因为下面的@BeforeClass已经是static的了
+    //  如果这个method也使用static修饰，就不能保证@BeforeClass修饰的方法在它之前执行了
+    public void testMethod2(){
+        System.out.println("test method 2");
+    }
+    
+    @BeforeClass
+    public static void beforeClass(){
+        System.out.println("before class");
+    }
+    
+    @AfterClass
+    public void afterClass(){
+        System.out.println("after class");
     }
 
 }
