@@ -52,9 +52,8 @@ public class JunitBaseAnnotation{
     }
     
     @Test
-//    public static void testMethod2(){
-    //  这里不能用static修饰，因为下面的@BeforeClass已经是static的了
-    //  如果这个method也使用static修饰，就不能保证@BeforeClass修饰的方法在它之前执行了
+    //    public static void testMethod2(){
+    //  @Test修饰的方法不能用static修饰
     public void testMethod2(){
         System.out.println("test method 2");
     }
