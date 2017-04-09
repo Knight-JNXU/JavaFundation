@@ -23,6 +23,6 @@ public class KMP {
             }
         }
 
-        for()
+//        for()
     }
 }
